@@ -25,7 +25,7 @@ jobs:
           aws-region: 'eu-west-3' # Remplacez par votre région AWS
 
       - name: 'Terraform Init'
-        run: terraform init
+        run: terraform init -backend-config=./backend.hcl
 
       - name: 'Terraform Plan'
         run: terraform plan
